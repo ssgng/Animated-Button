@@ -1,0 +1,63 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body{
+    background-color: #30333a;
+
+}
+
+.general .button{
+    position: relative;
+    width: 200px;
+    height: 45px;
+    border: 2px solid #ffd324;
+    margin: 15px;
+    text-align: center;
+    line-height: 45px;
+    overflow: hidden; /* tasmayi engelliyor */
+
+}
+.general .button a{
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffd324;
+    letter-spacing: 5px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.general .button.button-1::before{
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewy(10deg); /* getirdigimiz renkleri bukmeye yariyor. 10 derece buktuk. */
+    transition: all 0.5s ease;
+    background-color: #ffd324;
+}
+
+.general .button a:hover {color: #30333a;} /* butona fareyi getirdigimizde rengini saridan siyaha ceviriyor. */ 
+
+.general .button.button-1::after{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewy(10deg); /* getirdigimiz renkleri bukmeye yariyor. 10 derece buktuk. */
+    transition: all 0.5s ease;
+    background-color: #ffd324;
+}
+
+.general .button.button.button-1:hover::before{top: -20px;}
+.general .button.button.button-1:hover::after{top: 20px;}
